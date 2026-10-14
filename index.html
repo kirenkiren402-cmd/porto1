@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Khiren Dwi Amelia</title>
+  <style>
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef7ff, #f8f0ff);
+    color: #252525;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    width: 100%;
+    padding: 20px 30px;
+    background: #ffffff;
+    border-bottom: 3px solid #6c63ff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #5148d9;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-container a:hover {
+    color: #ff4f81;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    padding: 45px 20px 40px;
+}
+
+
+/* FOTO */
+
+.profile-photo {
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #6c63ff, #ff5f9e);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+
+/* NAMA */
+
+header h1 {
+    margin-top: 25px;
+    font-size: 42px;
+    color: #5148d9;
+}
+
+.jabatan {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+}
+
+
+/* =========================
+   GARIS
+========================= */
+
+.line {
+    width: 92%;
+    height: 3px;
+    margin: auto;
+    background: linear-gradient(
+        to right,
+        #6c63ff,
+        #ff5f9e,
+        #6c63ff
+    );
+    border-radius: 20px;
+}
+
+
+/* =========================
+   OVERVIEW
+========================= */
+
+.overview {
+    max-width: 1000px;
+    margin: auto;
+    padding: 55px 30px;
+    text-align: center;
+}
+
+.overview h2 {
+    font-size: 36px;
+    color: #5148d9;
+    margin-bottom: 25px;
+}
+
+.overview p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* =========================
+   SKILL & HOBI
+========================= */
+
+.info-container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 10px auto 70px;
+
+    /* INI YANG MEMBUAT SKILL & HOBI SEJAJAR */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* KOTAK */
+
+.info-box {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    border: 2px solid #ddd;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(108, 99, 255, 0.2);
+}
+
+
+/* JUDUL KOTAK */
+
+.box-title {
+    text-align: center;
+    padding: 14px;
+    font-size: 20px;
+    font-weight: bold;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #ff5f9e
+    );
+}
+
+
+/* ISI */
+
+.box-content {
+    padding: 25px 35px;
+    min-height: 150px;
+}
+
+.box-content ul {
+    padding-left: 20px;
+}
+
+.box-content li {
+    margin: 12px 0;
+    color: #444;
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.bottom-line {
+    margin-bottom: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .overview h2 {
+        font-size: 30px;
+    }
+
+    /* Di HP tetap rapi */
+    .info-container {
+        grid-template-columns: 1fr;
+    }
+}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR, PROFIL, OVERVIEW, SKILL, HOBI, DAN FOOTER -->
+  <nav>
+        <div class="nav-container">
+            <a href="#home">Home</a>
+            <span>|</span>
+            <a href="#download">Download CV</a>
+            <span>|</span>
+            <a href="#contact">Contact</a>
+            <span>|</span>
+            <a href="#about">About me</a>
+        </div>
+    </nav>
+
+
+    <!-- HEADER / PROFIL -->
+    <header id="home">
+
+        <!-- FOTO PROFIL -->
+        <div class="profile-photo">
+            <img src="https://lh3.googleusercontent.com/d/1tJVallR6ZO8wqYDQYLGNJhSxBQjV56SA" class="foto">
+        </div>
+
+        <h1>Khiren Dwi Amelia</h1>
+        <p class="jabatan">Siswi SMK Komputama</p>
+
+    </header>
+
+
+    <!-- GARIS PEMBATAS -->
+    <div class="line"></div>
+
+
+    <!-- OVERVIEW -->
+    <section class="overview" id="about">
+
+        <h2>Overview</h2>
+
+        <p>
+            Hi, saya adalah siswi SMK Komputama yang sedang belajar
+            dan mengembangkan kemampuan di bidang teknologi informasi.
+            Saya senang mempelajari hal-hal baru dan mencoba berbagai
+            hal yang berhubungan dengan teknologi.
+        </p>
+
+    </section>
+
+
+    <!-- SKILL & HOBI -->
+    <section class="info-container">
+
+        <!-- SKILL -->
+        <div class="info-box">
+
+            <div class="box-title">
+                Skill
+            </div>
+
+            <div class="box-content">
+                <ul>
+                    <li>HTML (Beginner)</li>
+                    <li>CSS (Beginner)</li>
+                    <li>JavaScript (Beginner)</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- HOBI -->
+        <div class="info-box">
+
+            <div class="box-title">
+                Hobi
+            </div>
+
+            <div class="box-content">
+                <ul>
+                    <li>Mendengarkan musik</li>
+                    <li>Tidur</li>
+                    <li>Bermain game</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GARIS PEMBATAS -->
+    <div class="line bottom-line"></div>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        Copyright © 2026 Nama Lengkap
+</body>
+</html>
